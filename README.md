@@ -35,7 +35,7 @@ Logical circuit of the above expressions is given below:
 Figure 02  Encoder 8 * 3
 
 **Procedure**
-
+```
 1.Type the program in Quartus software. 
 2.Compile and run the program. 
 3.Generate the RTL schematic and save the logic diagram.
@@ -43,6 +43,7 @@ Figure 02  Encoder 8 * 3
 generate the timing diagram. 
 5.For different input combinations generate the timing
 diagram.
+```
 
 **PROGRAM**
 
