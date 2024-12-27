@@ -1,4 +1,5 @@
 ### ENCODER 8TO3 DATAFLOW Modelling
+Date:29/10/2024
 
 **AIM:**
 
@@ -7,6 +8,9 @@ To implement  Encoder 8 To 3 in Dataflow Modelling using verilog and validating 
 **SOFTWARE REQUIRED:** Quartus prime
 
 **THEORY**
+Encoder 8 To 3
+
+The 8 to 3 line Encoder is also known as Octal to Binary Encoder. In 8 to 3 line encoder, there is a total of eight inputs, i.e., D0, D1, D2, D3, D4, D5, D6, and D7 and three outputs, i.e., A0, A1, and A2. In 8-input lines, one input-line is set to true at a time to get the respective binary code in the output side. Below are the block diagram and the truth table of the 8 to 3 line encoder.
 
 **Encoder 8 To 3**
 
@@ -15,10 +19,6 @@ The 8 to 3 line Encoder is also known as Octal to Binary Encoder. In 8 to 3 line
 ![image](https://github.com/naavaneetha/ENCODER8TO3DATAFLOW/assets/154305477/0bc242c1-eb9e-4c47-afe5-30428470efc3)
 
 Figure 01  Block Diagram of Encoder 8 * 3
-
-**Truth Table**
-
-![image](https://github.com/naavaneetha/ENCODER8TO3DATAFLOW/assets/154305477/35496b14-ae6e-4cd1-9abd-d6736b576575)
 
 The logical expression of the term A0, A1, and A2 are as follows:
 
@@ -34,37 +34,35 @@ Logical circuit of the above expressions is given below:
 
 Figure 02  Encoder 8 * 3
 
- ***Truthtable***
- 
- ![WhatsApp Image 2024-12-05 at 11 02 43_8c8ec798](https://github.com/user-attachments/assets/008dc1a2-c0e6-47c8-8d0c-c39ff1dd9840)
-
 **Procedure**
 
-1.Type the program in Quartus software. 2.Compile and run the program. 3.Generate
-the RTL schematic and save the logic diagram. 4.Create nodes for inputs and outputs to
-generate the timing diagram. 5.For different input combinations generate the timing
+1.Type the program in Quartus software. 
+2.Compile and run the program. 
+3.Generate the RTL schematic and save the logic diagram.
+4.Create nodes for inputs and outputs to
+generate the timing diagram. 
+5.For different input combinations generate the timing
 diagram.
 
 **PROGRAM**
 
-Developed by: Swetha K RegisterNumber: 24900616
+Developed by:  Swetha K  RegisterNumber:  24900616
 ```
-module enc(Y,A);
-input [0:7]Y;
-output [2:0]A;
-assign A[2]=(Y[4]|Y[5]|Y[6]|Y[7]);
-assign A[1]=(Y[2]|Y[3]|Y[6]|Y[7]);
-assign A[0]=(Y[1]|Y[3]|Y[5]|Y[7]);
+module enc(a,b,c,y0,y1,y2,y3,y4,y5,y6,y7);
+input y0,y1,y2,y3,y4,y5,y6,y7;
+output a,b,c;
+assign a= ( y4 | y5 | y6 | y7);
+assign b= ( y2 | y3 | y6 | y7);
+assign c= ( y1 | y3 | y5 | y7);
 endmodule
 ```
-**RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
+**RTL**
 
-![WhatsApp Image 2024-12-05 at 11 13 45_09c016f9](https://github.com/user-attachments/assets/2969fdb4-2262-49b1-9990-f21e4afc7182)
+![WhatsApp Image 2024-12-27 at 10 45 51_c228e15b](https://github.com/user-attachments/assets/a44b493d-586a-42ba-bbf1-6095412fee09)
 
 
-**TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
-
-![WhatsApp Image 2024-12-03 at 13 56 55_709dd1ca](https://github.com/user-attachments/assets/1829724c-7804-4dc4-9fa2-62d8fb1256bd)
+**Output**
+![WhatsApp Image 2024-12-27 at 10 46 02_41f13bfe](https://github.com/user-attachments/assets/42585d27-5de0-4720-b2c0-e7a0d5963a86)
 
 
 **RESULTS**
